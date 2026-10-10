@@ -88,7 +88,7 @@ Di bagian paling atas `script.js`, tulis **komentar banyak baris** berisi nama, 
    - jam tutup,
    - menu pertama dan menu terakhir (pakai indeks),
    - nama pelanggan pada transaksi kedua,
-   - nama menu yang dipesan pada item kedua di transaksi ketiga (ambil dari array `menu` lewat `indeksMenu`),
+ v  - nama menu yang dipesan pada item kedua di transaksi ketiga (ambil dari array `menu` lewat `indeksMenu`),
    - hasil `typeof` untuk: `kedai.tahunBerdiri`, `kedai.sedangBuka`, `kedai.website`, `kedai.jamOperasional`, `menu`, dan `transaksi[0].catatan`.
 5. Buat variabel `catatanKasir` **tanpa nilai**, lalu cetak.
 

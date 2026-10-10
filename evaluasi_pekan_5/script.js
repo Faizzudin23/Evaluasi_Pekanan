@@ -14,8 +14,8 @@ const kedai = {
     nomorWhatsapp: "082558439751",
     webseite: null,
     jamOperasional: {
-        buka: true,
-        tutup: false,
+        buka: "09:00",
+        tutup: "21:00",
     },
 };
 
@@ -70,6 +70,7 @@ let menu = [
 ];
 
 let transaksi = [
+    // TRANSAKSI 1
     {
         kode: "TRX-001",
         pelanggan: "Budianto",
@@ -82,6 +83,7 @@ let transaksi = [
         ],
     },
 
+    // TRANSAKSI 2
     {
         kode: "TRX-002",
         pelanggan: "Aminah",
@@ -94,6 +96,7 @@ let transaksi = [
         ],
     },
 
+    // TRANSAKSI 3
     {
         kode: "TRX-003",
         pelanggan: "Alfiyan",
@@ -107,23 +110,34 @@ let transaksi = [
     },
 ];
 
+console.log("Nama Kedai         : " + kedai.nama);
+console.log("Nama Kota          : " + kedai["kota"]);
+console.log("Jam Tutup          : " + kedai.jamOperasional.tutup + " WIB");
+console.log("Menu Awal & Akhir  : "); 
+console.log(menu[0], menu[5]);
+console.log("Nama Pelanggan Transaksi Ke-2 : " + transaksi[1].pelanggan);
+console.log("Menu yang dipesan  : " + transaksi[2].pesanan);
+console.log("Hasil kedai.tahunBerdiri   : " + typeof kedai.tahunBerdiri);
+console.log("Hasil kedai.sedangBuka     : " + typeof kedai.sedangBuka);
+console.log("Hasil kedai.website        : " + typeof kedai.website);
+console.log("Hasil kedai.jamOperasional : " + typeof kedai.jamOperasional);
+console.log("Hasil menu                 : " + typeof menu);
+console.log("Hasil transaksi[0].catatan : " + typeof transaksi[0].catatan);
+
+let catatanKasir;
+console.log("Hasil dari catatanKasir : " + catatanKasir);
 /*
 PERTANYAAN :
 1. Kenapa `nomorWhatsApp` disimpan sebagai string, bukan number?
+    - Karena angka yang dimasukkan tujuannya adalah sebagai teks, bukan sebagai angka untuk perhitungan.
 2. Kenapa `website` diisi `null`, sedangkan `catatanKasir` dibiarkan tanpa nilai?
+ v   - Karena nilai dari website memang sengaja dikosongkan, nantinya akan diisi nilai, sedangkan catatanKasir
 3. Jika `menu` berisi 6 item, apa hasil `menu[6]`? Kenapa?
+    - hasilnya adalah undefined karena, secara program data indeks dimulai dari 0, sehingga jika ingin memunculkan harus memakai indeks angka sebelumnya yaitu 5.
 4. Apa hasil `typeof menu`? Kenapa hasilnya begitu?
+    - hasilnya adalah object karena, data yang 
 5. Kenapa `menu` dibuat sebagai array, sedangkan `kedai` dibuat sebagai object?
+    - karena didalamnya termuat beberapa menu dan memuat informasi menu, sedangkan kedai dibuat object karena satu nilai yang didalamnya mengandung nilai yang 
+      terstruktur dan memiliki atribut yang terkait satu dengan yang lainnya.
 */
 
-// BAGIAN 3 : HITUNGAN KASIR
-
-/* 
-PERTANYAAN :
-1. Tulis perhitungan **manual** untuk satu transaksi pilihanmu dari subtotal sampai kembalian. Apakah sama dengan hasil program?
-2. Pilih satu transaksi. Ganti `||` pada `gratisAntar` menjadi `&&`. Tulis hasil sebelum dan sesudah, lalu jelaskan kenapa berbeda.
-3. Tulis satu perhitunganmu yang hasilnya berubah jika tanda kurungnya dihapus. Berapa hasil dengan dan tanpa kurung?
-4. Sebutkan 3 variabelmu yang memakai `const` dan 3 yang memakai `let`. Jelaskan alasan masing-masing.
-5. Kenapa `hargaKopiTigaBulan` tidak dihitung dengan `harga * 1.05 * 3`? Apa bedanya `1.05 ** 3` dengan `1.05 * 3`?
-6. Jika `harga` pada `menu[0]` diubah di data, apakah hasil perhitungan yang sudah tercetak ikut berubah otomatis? Buktikan dengan kode.
-*/
