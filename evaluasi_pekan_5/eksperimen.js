@@ -33,3 +33,21 @@ true
 true
 50
 */
+
+
+// BAGIAN 5.2 : EKSPERIMEN
+{
+    let x = 10;
+}
+//console.log(x);
+
+{
+    var y = 20;
+}
+console.log(y);
+
+var nama = "amin";
+var nama = "budi";
+
+let hobi = "belajar"; 
+//let hobi = "main"; 
